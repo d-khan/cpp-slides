@@ -1587,52 +1587,6 @@ int result = 2 + 3 * 4;
 <QuizQuestion
   question="What value is stored in result?"
   :options="[
-    '14',
-    '20',
-    '24',
-    'Compilation error'
-  ]"
-  correct="20"
-  explanation="Parentheses are evaluated first: 2 + 3 = 5. Then 5 * 4 = 20."
->
-
-```cpp
-int result = (2 + 3) * 4;
-```
-
-</QuizQuestion>
-
-
----
-
-# Knowledge Check
-
-<QuizQuestion
-  question="What value is stored in result?"
-  :options="[
-    '14',
-    '20',
-    '24',
-    'Compilation error'
-  ]"
-  correct="20"
-  explanation="Parentheses are evaluated first: 2 + 3 = 5. Then 5 * 4 = 20."
->
-
-```cpp
-int result = (2 + 3) * 4;
-```
-
-</QuizQuestion>
-
-
----
-
-# Knowledge Check
-
-<QuizQuestion
-  question="What value is stored in result?"
-  :options="[
     '4.0',
     '4.5',
     '5.0',
@@ -1645,6 +1599,34 @@ int result = (2 + 3) * 4;
 ```cpp
 int x = 8, y = 3;
 double result = x / y * 2.5;
+```
+
+</QuizQuestion>
+
+---
+
+<QuizQuestion
+  style="transform: translateY(-60px);"
+  question="What is the primary reason this program will not compile?"
+  :options="[
+    'score is not initialized',
+    'score is not declared',
+    'cout cannot print integers',
+    'main() cannot return 0'
+  ]"
+  correct="score is not declared"
+  explanation="The compiler encounters score without a prior declaration. Every variable must be declared before it is used."
+>
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    score = 90;
+    cout << score;
+    return 0;
+}
 ```
 
 </QuizQuestion>
