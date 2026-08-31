@@ -1,0 +1,14 @@
+# Node dependencies
+node_modules/
+**/node_modules/
+
+# Slidev build output
+dist/
+**/dist/
+
+# macOS
+.DS_Store
+
+# Environment files
+.env
+.env.local
