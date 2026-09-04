@@ -27,21 +27,42 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-          cache-dependency-path: Introduction/package-lock.json
 
-      - name: Install dependencies
-        working-directory: Introduction
+      # ==========================================
+      # Introduction
+      # ==========================================
+
+      - name: Install introduction dependencies
+        working-directory: introduction
         run: npm ci
 
-      - name: Build Introduction
-        working-directory: Introduction
-        run: npm run build -- --base /cpp-slides/Introduction/
+      - name: Build introduction
+        working-directory: introduction
+        run: npm run build -- --base /cpp-slides/introduction/
+
+      # ==========================================
+      # Input / Output
+      # ==========================================
+
+      - name: Install input-output dependencies
+        working-directory: input-output
+        run: npm ci
+
+      - name: Build input-output
+        working-directory: input-output
+        run: npm run build -- --base /cpp-slides/input-output/
+
+      # ==========================================
+      # Prepare GitHub Pages
+      # ==========================================
 
       - name: Prepare site
         run: |
-          mkdir -p site/Introduction
-          cp -R Introduction/dist/* site/Introduction/
+          mkdir -p site/introduction
+          mkdir -p site/input-output
+
+          cp -R introduction/dist/* site/introduction/
+          cp -R input-output/dist/* site/input-output/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
