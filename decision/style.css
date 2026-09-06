@@ -1,0 +1,467 @@
+/* =========================================================
+   DEFINITION BOX
+   ========================================================= */
+
+.slidev-layout .definition-box {
+  border-left: 4px solid #2f75ff !important;
+  padding-left: 20px !important;
+  margin-top: 32px !important;
+
+  color: #f5d442 !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 1.65rem !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+}
+
+
+/* =========================================================
+   CODE TITLE
+   ========================================================= */
+
+.slidev-layout .code-title {
+  display: inline-block;
+
+  background-color: #2949b8;
+  color: white;
+
+  padding: 2px 14px;
+  margin-top: 20px;
+  margin-bottom: 1px;
+
+  border-radius: 7px;
+
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   NORMAL TEXT
+   ========================================================= */
+
+.slidev-layout .normal-text {
+  font-family: "Courier New", monospace !important;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+  color: white;
+}
+
+.slidev-layout .normal-text-small {
+  font-family: "Courier New", monospace !important;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+  color: white;
+}
+
+
+/* =========================================================
+   COMPACT CONTENT
+   ========================================================= */
+
+/*
+   Use when a slide needs tighter vertical spacing.
+
+   Example:
+   <div class="normal-text compact-content">
+*/
+
+.slidev-layout .compact-content h2,
+.slidev-layout .compact-content h3,
+.slidev-layout .compact-content h4 {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+.slidev-layout .compact-content p {
+  margin-top: 3px !important;
+  margin-bottom: 6px !important;
+  line-height: 1.25 !important;
+}
+
+.slidev-layout .compact-content ul,
+.slidev-layout .compact-content ol {
+  margin-top: 3px !important;
+  margin-bottom: 8px !important;
+}
+
+.slidev-layout .compact-content li {
+  margin-top: 2px !important;
+  margin-bottom: 3px !important;
+  line-height: 1.2 !important;
+}
+
+.slidev-layout .compact-content li ul,
+.slidev-layout .compact-content li ol {
+  margin-top: 1px !important;
+  margin-bottom: 5px !important;
+}
+
+
+/* =========================================================
+   INLINE CODE
+   ========================================================= */
+
+.slidev-layout .normal-text code,
+.slidev-layout .normal-text-small code,
+.slidev-layout .definition-box code {
+  color: #f5d442 !important;
+  background: transparent !important;
+
+  font-family: "Courier New", monospace !important;
+  font-size: 1em !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+
+  padding: 0 !important;
+}
+
+
+/*
+   Remove decorative backticks inserted by the theme.
+   Fenced code blocks are not affected.
+*/
+
+.slidev-layout :not(pre) > code::before,
+.slidev-layout :not(pre) > code::after {
+  content: "" !important;
+}
+
+
+/* =========================================================
+   COMPACT TABLE
+   ========================================================= */
+
+/*
+   General-purpose compact table.
+
+   Example:
+   <div class="compact-table">
+*/
+
+.slidev-layout .compact-table table {
+  width: 100% !important;
+
+  margin-top: 5px !important;
+  margin-bottom: 8px !important;
+
+  border-collapse: collapse;
+}
+
+.slidev-layout .compact-table th,
+.slidev-layout .compact-table td {
+  padding: 4px 7px !important;
+
+  height: auto !important;
+  line-height: 1.1 !important;
+
+  font-size: var(--table-font-size, 16px) !important;
+}
+
+
+/* =========================================================
+   MEMORY TABLE
+   ========================================================= */
+
+.slidev-layout .memory-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  font-family: "Courier New", monospace;
+  font-size: 1.05rem;
+}
+
+.slidev-layout .memory-table th {
+  background-color: #2956d7;
+  color: white;
+
+  padding: 14px 12px;
+
+  text-align: center;
+  border: 1px solid #cccccc;
+
+  font-weight: 600;
+}
+
+.slidev-layout .memory-table td {
+  padding: 14px 12px;
+
+  text-align: center;
+  border: 1px solid #cccccc;
+}
+
+
+/* =========================================================
+   EQUATIONS
+   ========================================================= */
+
+.slidev-layout .equation-row {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  font-size: 2rem;
+  margin: 24px 0;
+}
+
+.slidev-layout .equation-row .equation {
+  flex: 1;
+  text-align: center;
+}
+
+.slidev-layout .equation-row .equation-number {
+  width: 80px;
+  text-align: right;
+}
+
+
+/* =========================================================
+   TOOLTIPS
+   ========================================================= */
+
+.v-popper--theme-tooltip .v-popper__inner {
+  background: #f5d442 !important;
+  color: #000000 !important;
+
+  font-size: 1rem !important;
+  line-height: 1.4 !important;
+
+  padding: 10px 14px !important;
+
+  border-radius: 6px !important;
+
+  max-width: 420px !important;
+  white-space: normal !important;
+}
+
+.v-popper--theme-tooltip .v-popper__arrow-outer {
+  border-color: #f5d442 !important;
+}
+
+
+/* =========================================================
+   SCROLLABLE TABLE
+   ========================================================= */
+
+/*
+   Example:
+   <div class="scroll-table"
+        style="--table-height: 350px; --table-width: 100%;">
+*/
+
+.slidev-layout .scroll-table {
+  height: var(--table-height, 400px) !important;
+  width: var(--table-width, 80%) !important;
+
+  overflow-y: auto !important;
+  overflow-x: auto !important;
+
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   OPERATOR PRECEDENCE TABLE
+   ========================================================= */
+
+.slidev-layout .precedence-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  font-family: "Courier New", monospace;
+  font-size: 1.15rem;
+}
+
+.slidev-layout .precedence-table th {
+  background-color: #2956d7;
+  color: white;
+
+  padding: 14px 16px;
+
+  text-align: left;
+  border: 1px solid #cccccc;
+
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.slidev-layout .precedence-table td {
+  padding: 16px;
+
+  text-align: center;
+  vertical-align: middle;
+
+  border: 1px solid #cccccc;
+}
+
+.slidev-layout .precedence-table td:nth-child(2) {
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   SCROLLABLE CODE BLOCK
+   ========================================================= */
+
+/*
+   Default height: 200px
+
+   Example:
+   <div class="scroll-code"
+        style="--code-height: 340px;">
+*/
+
+.slidev-layout .scroll-code {
+  height: var(--code-height, 200px);
+
+  overflow-y: auto !important;
+  overflow-x: auto !important;
+
+  background: #12131a !important;
+  border-radius: 8px;
+
+  scrollbar-width: auto;
+  scrollbar-color: #888888 #12131a;
+}
+
+
+/* Chrome / Safari / Edge */
+
+.slidev-layout .scroll-code::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.slidev-layout .scroll-code::-webkit-scrollbar-track {
+  background: #12131a;
+  border-radius: 8px;
+}
+
+.slidev-layout .scroll-code::-webkit-scrollbar-thumb {
+  background: #888888;
+  border-radius: 6px;
+  border: 2px solid #12131a;
+}
+
+
+/*
+   Let the outer .scroll-code container control scrolling.
+*/
+
+.slidev-layout .scroll-code pre,
+.slidev-layout .scroll-code .slidev-code-wrapper {
+  max-height: none !important;
+  height: auto !important;
+
+  overflow: visible !important;
+
+  margin: 0 !important;
+}
+
+.slidev-layout .scroll-code pre {
+  background: transparent !important;
+}
+
+/* =========================================================
+   QUIZ EXPLANATION POPUP
+   ========================================================= */
+
+/*
+   Full-screen overlay displayed after a correct answer.
+*/
+
+.explanation-overlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.65);
+
+  z-index: 9999;
+}
+
+
+/*
+   Explanation popup
+*/
+
+.explanation-popup {
+  width: 70%;
+  max-width: 850px;
+
+  background: #282a36;
+
+  border: 2px solid #50fa7b;
+  border-radius: 14px;
+
+  padding: 28px 32px;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+
+/*
+   "Correct" heading
+*/
+
+.explanation-title {
+  color: #50fa7b;
+
+  font-family: "Courier New", monospace;
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  margin-bottom: 14px;
+}
+
+
+/*
+   Explanation text
+*/
+
+.explanation-text {
+  color: white;
+
+  font-family: "Courier New", monospace;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+/*
+   Close button
+*/
+
+.close-explanation {
+  margin-top: 22px;
+
+  background: #2f75ff;
+  color: white;
+
+  border: none;
+  border-radius: 7px;
+
+  padding: 8px 22px;
+
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+
+  cursor: pointer;
+}
+
+.close-explanation:hover {
+  background: #245ed1;
+}
+

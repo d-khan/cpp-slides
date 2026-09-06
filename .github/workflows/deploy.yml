@@ -53,6 +53,18 @@ jobs:
         run: npm run build -- --base /cpp-slides/input-output/
 
       # ==========================================
+      # Decision Statements
+      # ==========================================
+
+      - name: Install decision dependencies
+        working-directory: decision
+        run: npm ci
+
+      - name: Build decision
+        working-directory: decision
+        run: npm run build -- --base /cpp-slides/decision/
+
+      # ==========================================
       # Prepare GitHub Pages
       # ==========================================
 
@@ -60,9 +72,11 @@ jobs:
         run: |
           mkdir -p site/introduction
           mkdir -p site/input-output
+          mkdir -p site/decision
 
           cp -R introduction/dist/* site/introduction/
           cp -R input-output/dist/* site/input-output/
+          cp -R decision/dist/* site/decision/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
