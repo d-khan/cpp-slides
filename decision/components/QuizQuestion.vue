@@ -109,13 +109,14 @@ const formattedExplanation = computed(() => {
     </div>
 
     <!-- Check Answer -->
-    <button
-      class="mt-6 px-6 py-2 rounded-lg bg-blue-600 text-white"
-      @click="checkAnswer"
+    <div class="flex justify-end mt-6">
+        <button
+        class="px-6 py-2 rounded-lg bg-blue-600 text-white"
+        @click="checkAnswer"
     >
-      Check Answer
+        Check Answer
     </button>
-
+    </div>
 
     <!-- =====================================================
          EXPLANATION POPUP
