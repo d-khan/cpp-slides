@@ -1,7 +1,7 @@
 ---
 theme: dracula
 background: https://cover.sli.dev
-title: Basic elements of C++
+title: Decision statements
 author: Dr Danish Khan
 transition: fade-out
 mdc: true

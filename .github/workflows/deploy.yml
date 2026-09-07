@@ -65,6 +65,18 @@ jobs:
         run: npm run build -- --base /cpp-slides/decision/
 
       # ==========================================
+      # Loops
+      # ==========================================
+
+      - name: Install loops dependencies
+        working-directory: loops
+        run: npm ci
+
+      - name: Build loops
+        working-directory: loops
+        run: npm run build -- --base /cpp-slides/loops/
+
+      # ==========================================
       # Prepare GitHub Pages
       # ==========================================
 
@@ -73,10 +85,12 @@ jobs:
           mkdir -p site/introduction
           mkdir -p site/input-output
           mkdir -p site/decision
+          mkdir -p site/loops
 
           cp -R introduction/dist/* site/introduction/
           cp -R input-output/dist/* site/input-output/
           cp -R decision/dist/* site/decision/
+          cp -R loops/dist/* site/loops/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

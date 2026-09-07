@@ -62,24 +62,15 @@
    ========================================================= */
 
 /* Inline code inside normal text */
-
-.slidev-layout .normal-text code,
-
-.slidev-layout .normal-text-small code {
-
+.slidev-layout .normal-text code {
   color: #f5d442 !important;
-
   background: transparent !important;
-
   font-family: "Courier New", monospace !important;
-
   font-size: 1em !important;
-
   font-weight: 400 !important;
-
   padding: 0 !important;
-
 }
+
 
 /*
    Remove decorative backticks inserted by the theme.
@@ -148,15 +139,17 @@
   text-align: right;
 }
 
+
 /* =========================================================
    TOOLTIPS
    ========================================================= */
 
+/* VTooltip popup */
 .v-popper--theme-tooltip .v-popper__inner {
   background: #f5d442 !important;
   color: #000000 !important;
 
-  font-size: 0.9rem !important;
+  font-size: 1rem !important;
   line-height: 1.4 !important;
 
   padding: 10px 14px !important;
@@ -237,7 +230,6 @@
   font-weight: 600;
 }
 
-
 /* =========================================================
    SCROLLABLE CODE BLOCK
    ========================================================= */
@@ -289,3 +281,99 @@
 .slidev-layout .scroll-code pre {
   background: transparent !important;
 }
+
+/* =========================================================
+   QUIZ EXPLANATION POPUP
+   ========================================================= */
+
+/*
+   Full-screen overlay displayed after a correct answer.
+*/
+
+.explanation-overlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.65);
+
+  z-index: 9999;
+}
+
+
+/*
+   Explanation popup
+*/
+
+.explanation-popup {
+  width: 70%;
+  max-width: 850px;
+
+  background: #282a36;
+
+  border: 2px solid #50fa7b;
+  border-radius: 14px;
+
+  padding: 28px 32px;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+
+/*
+   "Correct" heading
+*/
+
+.explanation-title {
+  color: #50fa7b;
+
+  font-family: "Courier New", monospace;
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  margin-bottom: 14px;
+}
+
+
+/*
+   Explanation text
+*/
+
+.explanation-text {
+  color: white;
+
+  font-family: "Courier New", monospace;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+/*
+   Close button
+*/
+
+.close-explanation {
+  margin-top: 22px;
+
+  background: #2f75ff;
+  color: white;
+
+  border: none;
+  border-radius: 7px;
+
+  padding: 8px 22px;
+
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+
+  cursor: pointer;
+}
+
+.close-explanation:hover {
+  background: #245ed1;
+}
+
