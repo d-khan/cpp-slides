@@ -89,6 +89,18 @@ jobs:
         run: npm run build -- --base /cpp-slides/functions/
 
       # ==========================================
+      # User-Defined Types
+      # ==========================================
+
+      - name: Install user-defined-types dependencies
+        working-directory: user-defined-types
+        run: npm ci
+
+      - name: Build user-defined-types
+        working-directory: user-defined-types
+        run: npm run build -- --base /cpp-slides/user-defined-types/
+
+      # ==========================================
       # Prepare GitHub Pages
       # ==========================================
 
@@ -99,12 +111,14 @@ jobs:
           mkdir -p site/decision
           mkdir -p site/loops
           mkdir -p site/functions
+          mkdir -p site/user-defined-types
 
           cp -R introduction/dist/* site/introduction/
           cp -R input-output/dist/* site/input-output/
           cp -R decision/dist/* site/decision/
           cp -R loops/dist/* site/loops/
           cp -R functions/dist/* site/functions/
+          cp -R user-defined-types/dist/* site/user-defined-types/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
