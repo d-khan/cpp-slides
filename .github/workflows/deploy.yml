@@ -111,6 +111,18 @@ jobs:
       - name: Build arrays
         working-directory: arrays
         run: npm run build -- --base /cpp-slides/arrays/
+        
+      # ==========================================
+      # Structures
+      # ==========================================
+
+      - name: Install structures dependencies
+        working-directory: structures
+        run: npm ci
+
+      - name: Build structures
+        working-directory: structures
+        run: npm run build -- --base /cpp-slides/structures/
     
       # ==========================================
       # Prepare GitHub Pages
@@ -125,6 +137,7 @@ jobs:
           mkdir -p site/functions
           mkdir -p site/user-defined-types
           mkdir -p site/arrays
+          mkdir -p site/structures
 
           cp -R introduction/dist/* site/introduction/
           cp -R input-output/dist/* site/input-output/
@@ -133,6 +146,7 @@ jobs:
           cp -R functions/dist/* site/functions/
           cp -R user-defined-types/dist/* site/user-defined-types/
           cp -R arrays/dist/* site/arrays/
+          cp -R structures/dist/* site/structures/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
